@@ -1,150 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprehensive Home Care - Personalized home health care services in Chicago, IL">
-    <title>Comprehensive Home Care - Home Health Care Services</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comprehensive Home Care provides personalized, professional home health care services in Chicago. Expert caregivers for aging, recovery, and rehabilitation.">
+  <meta name="keywords" content="home care, home health, Chicago, elderly care, recovery assistance, rehabilitation">
+  <title>Comprehensive Home Care | Professional Home Health Services in Chicago</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Comprehensive Home Care</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">C</div>
+        <span class="nav__logo-text">Comprehensive <span>Home Care</span></span>
+      </a>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Feel Better in the Comfort of Your Own Home</h2>
-                <p>Personalized care for aging, illness, recovery, and rehabilitation</p>
-                <a href="contact.html" class="cta-button">Get Started</a>
-            </div>
-        </section>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
 
-        <!-- About Section -->
-        <section class="about">
-            <div class="container">
-                <h2>About Us</h2>
-                <p>We specialize in care to an array of individuals. Our experienced home health aides provide one-on-one personalized attention, building trusted relationships with every client.</p>
-            </div>
-        </section>
+      <a href="contact.html" class="btn btn--primary nav__cta">Get Started</a>
 
-        <!-- Services Preview -->
-        <section class="services-preview">
-            <div class="container">
-                <h2>Our Services</h2>
-                <div class="service-cards">
-                    <div class="card">
-                        <div class="card-icon">💙</div>
-                        <h3>Personalized Care</h3>
-                        <p>Individualized care plans tailored to your specific needs</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">👥</div>
-                        <h3>Experienced Staff</h3>
-                        <p>Trained and compassionate home health aides</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">📅</div>
-                        <h3>Flexible Scheduling</h3>
-                        <p>Daily or weekly care options to fit your lifestyle</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <button class="nav__mobile-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
 
-        <!-- Feature Image Section -->
-        <section class="feature-image-section">
-            <div class="feature-image">
-                <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&h=400&fit=crop" alt="Caregiver helping elderly patient">
-            </div>
-            <div class="feature-content">
-                <h2>Professional Care at Home</h2>
-                <p>Our dedicated team brings professional healthcare services directly to your doorstep, ensuring comfort, safety, and peace of mind.</p>
-                <p>With years of experience and a compassionate approach, we provide the highest quality care tailored to each individual's unique needs.</p>
-            </div>
-        </section>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Trusted Care Since 2014
+          </div>
 
-        <!-- Second Feature Section -->
-        <section class="feature-image-section reverse">
-            <div class="feature-content">
-                <h2>Compassionate & Experienced Team</h2>
-                <p>Our caregivers are carefully selected, thoroughly trained, and deeply committed to providing exceptional care.</p>
-                <p>We believe in building genuine relationships with our clients and their families, creating a supportive and trusting environment.</p>
-            </div>
-            <div class="feature-image">
-                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=400&fit=crop" alt="Healthcare professional smiling">
-            </div>
-        </section>
+          <h1 class="hero__title">
+            Professional Care in the <span class="hero__title-accent">Comfort of Home</span>
+          </h1>
 
-        <!-- Stats Section -->
-        <section class="stats-section">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>10+</h3>
-                    <p>Years of Service</p>
-                </div>
-                <div class="stat-item">
-                    <h3>500+</h3>
-                    <p>Happy Clients</p>
-                </div>
-                <div class="stat-item">
-                    <h3>24/7</h3>
-                    <p>Available Support</p>
-                </div>
-            </div>
-        </section>
+          <p class="hero__description">
+            Experience exceptional home health care tailored to your needs. Our compassionate caregivers provide personalized support for aging, recovery, and rehabilitation—right where you feel most comfortable.
+          </p>
 
-        <!-- Testimonials -->
-        <section class="testimonial-section">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">The care my mother received was exceptional. The staff was professional, caring, and always went above and beyond.</p>
-                    <p class="testimonial-author">- Sarah M.</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">I'm so grateful for the personalized attention and compassionate care. It truly made a difference in my recovery.</p>
-                    <p class="testimonial-author">- James R.</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Highly recommend! Professional, reliable, and genuinely caring team. My father feels comfortable and well-cared for.</p>
-                    <p class="testimonial-author">- Maria L.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+          <div class="hero__actions">
+            <a href="contact.html" class="btn btn--primary btn--lg">
+              Schedule Consultation
+              <svg class="btn--icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+            <a href="services.html" class="btn btn--secondary btn--lg">View Our Services</a>
+          </div>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Comprehensive Home Care</h3>
-                    <p>6321 N Avondale Ave Suite 106<br>Chicago, IL 60631</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Hours</h3>
-                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p><a href="contact.html">Get in Touch</a></p>
-                </div>
+          <div class="hero__trust">
+            <div class="hero__trust-item">
+              <svg class="hero__trust-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              Licensed & Insured
             </div>
-            <p class="copyright">&copy; 2024 Comprehensive Home Care. All rights reserved.</p>
+            <div class="hero__trust-item">
+              <svg class="hero__trust-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              24/7 Support
+            </div>
+            <div class="hero__trust-item">
+              <svg class="hero__trust-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              Personalized Plans
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="js/main.js"></script>
+    <!-- Services Section -->
+    <section class="section section--gray">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Our Services</p>
+          <h2 class="section__title">Comprehensive Care Solutions</h2>
+          <p class="section__description">
+            From daily assistance to specialized medical support, we provide the full spectrum of home health services tailored to your unique needs.
+          </p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Personal Care</h3>
+            <p class="service-card__description">
+              Assistance with daily activities including bathing, grooming, medication reminders, and mobility support with dignity and respect.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Recovery Support</h3>
+            <p class="service-card__description">
+              Post-surgical and post-hospitalization care to help you regain strength and independence safely at home.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Companionship</h3>
+            <p class="service-card__description">
+              Meaningful social interaction, engagement in activities, and emotional support to enhance quality of life.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Section 1 -->
+    <section class="section">
+      <div class="container">
+        <div class="feature">
+          <div class="feature__image">
+            <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=800&h=600&fit=crop" alt="Caregiver providing compassionate support to elderly patient at home">
+          </div>
+          <div class="feature__content">
+            <p class="feature__eyebrow">Why Choose Us</p>
+            <h2 class="feature__title">Exceptional Care, Exceptional Results</h2>
+            <p class="feature__description">
+              Our team of experienced healthcare professionals is dedicated to providing the highest standard of care. We believe every individual deserves personalized attention and support.
+            </p>
+            <ul class="feature__list">
+              <li class="feature__list-item">
+                <svg class="feature__list-icon" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Carefully vetted and trained caregivers
+              </li>
+              <li class="feature__list-item">
+                <svg class="feature__list-icon" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Customized care plans for each client
+              </li>
+              <li class="feature__list-item">
+                <svg class="feature__list-icon" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Regular quality assessments
+              </li>
+              <li class="feature__list-item">
+                <svg class="feature__list-icon" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Transparent communication with families
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section section--primary">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="stat__number">10+</div>
+            <div class="stat__label">Years of Service</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number">500+</div>
+            <div class="stat__label">Families Served</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number">98%</div>
+            <div class="stat__label">Client Satisfaction</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number">24/7</div>
+            <div class="stat__label">Support Available</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Section 2 -->
+    <section class="section">
+      <div class="container">
+        <div class="feature feature--reverse">
+          <div class="feature__image">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&h=600&fit=crop" alt="Professional healthcare team member smiling">
+          </div>
+          <div class="feature__content">
+            <p class="feature__eyebrow">Our Approach</p>
+            <h2 class="feature__title">Person-Centered Care Philosophy</h2>
+            <p class="feature__description">
+              We treat every client as an individual with unique needs, preferences, and goals. Our person-centered approach ensures that care is not just effective, but also respectful and empowering.
+            </p>
+            <ul class="feature__list">
+              <li class="feature__list-item">
+                <svg class="feature__list-icon" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Dignity and respect in every interaction
+              </li>
+              <li class="feature__list-item">
+                <svg class="feature__list-icon" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Flexible scheduling to fit your life
+              </li>
+              <li class="feature__list-item">
+                <svg class="feature__list-icon" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Continuous care plan adjustments
+              </li>
+              <li class="feature__list-item">
+                <svg class="feature__list-icon" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Family involvement encouraged
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section--gray">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Testimonials</p>
+          <h2 class="section__title">What Our Clients Say</h2>
+          <p class="section__description">
+            Hear from families who have experienced the difference that compassionate, professional home care can make.
+          </p>
+        </header>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              "The care my mother receives is exceptional. The caregivers are not just professional, they genuinely care. Mom looks forward to their visits, and we have peace of mind knowing she's in good hands."
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">SM</div>
+              <div class="testimonial-card__info">
+                <div class="testimonial-card__name">Sarah Mitchell</div>
+                <div class="testimonial-card__role">Family Member</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              "After my surgery, I was worried about recovery at home. The team at Comprehensive Home Care made the transition seamless and helped me regain my independence faster than I expected."
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">JR</div>
+              <div class="testimonial-card__info">
+                <div class="testimonial-card__name">James Rodriguez</div>
+                <div class="testimonial-card__role">Patient</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              "Professional, reliable, and genuinely caring. I highly recommend them to anyone seeking quality home care services. They've made such a positive impact on our family's life."
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">ML</div>
+              <div class="testimonial-card__info">
+                <div class="testimonial-card__name">Maria Lopez</div>
+                <div class="testimonial-card__role">Family Member</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <h2 class="cta__title">Ready to Experience Better Care?</h2>
+          <p class="cta__description">
+            Schedule a free consultation to discuss your needs and learn how we can help you or your loved one live better at home.
+          </p>
+          <div class="cta__actions">
+            <a href="contact.html" class="btn btn--white btn--lg">Schedule Free Consultation</a>
+            <a href="tel:+13125551234" class="btn btn--secondary btn--lg" style="background: transparent; color: white; border-color: rgba(255,255,255,0.3);">
+              Call (312) 555-1234
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="footer__logo-icon">C</div>
+            <span class="footer__logo-text">Comprehensive Home Care</span>
+          </div>
+          <p class="footer__description">
+            Providing exceptional home health care services to families throughout the Chicago area. Your comfort, health, and independence are our priority.
+          </p>
+        </div>
+
+        <div class="footer__section">
+          <h4 class="footer__section-title">Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html" class="footer__link">Personal Care</a></li>
+            <li><a href="services.html" class="footer__link">Recovery Support</a></li>
+            <li><a href="services.html" class="footer__link">Companionship</a></li>
+            <li><a href="services.html" class="footer__link">Rehabilitation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h4 class="footer__section-title">Company</h4>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">About Us</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+            <li><a href="#" class="footer__link">Careers</a></li>
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h4 class="footer__section-title">Contact</h4>
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>6321 N Avondale Ave Suite 106<br>Chicago, IL 60631</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>Mon - Fri: 9:00 AM - 5:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Comprehensive Home Care. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
