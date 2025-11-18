@@ -198,7 +198,7 @@ button {
 }
 
 .nav__logo-icon {
-  width: 40px;
+  width: 44px;
   height: 40px;
   background-color: var(--color-primary-600);
   border-radius: var(--radius-lg);
@@ -207,7 +207,8 @@ button {
   justify-content: center;
   color: var(--color-white);
   font-weight: var(--font-bold);
-  font-size: var(--text-lg);
+  font-size: var(--text-sm);
+  letter-spacing: -0.02em;
 }
 
 .nav__logo-text {
@@ -889,7 +890,7 @@ button {
 }
 
 .footer__logo-icon {
-  width: 40px;
+  width: 44px;
   height: 40px;
   background-color: var(--color-primary-600);
   border-radius: var(--radius-lg);
@@ -898,7 +899,8 @@ button {
   justify-content: center;
   color: var(--color-white);
   font-weight: var(--font-bold);
-  font-size: var(--text-lg);
+  font-size: var(--text-sm);
+  letter-spacing: -0.02em;
 }
 
 .footer__logo-text {
