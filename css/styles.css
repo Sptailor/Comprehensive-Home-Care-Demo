@@ -16,8 +16,6 @@
     --white: #ffffff;
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
-    --gradient-primary: linear-gradient(135deg, #1a5f7a 0%, #159895 100%);
-    --gradient-light: linear-gradient(135deg, #57c5b6 0%, #159895 100%);
 }
 
 body {
@@ -54,10 +52,7 @@ nav {
 }
 
 .logo h1 {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-color);
     font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -85,7 +80,7 @@ nav {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--gradient-primary);
+    background: var(--secondary-color);
     transition: width 0.3s ease;
 }
 
@@ -101,7 +96,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: var(--gradient-primary);
+    background: var(--primary-color);
     color: var(--white);
     padding: 8rem 2rem;
     text-align: center;
@@ -116,9 +111,10 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
-    background-size: 50px 50px;
-    opacity: 0.3;
+    background: url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
 }
 
 .hero-content {
@@ -214,7 +210,7 @@ section {
     left: 0;
     width: 100%;
     height: 4px;
-    background: var(--gradient-primary);
+    background: var(--secondary-color);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -232,7 +228,7 @@ section {
 .card-icon {
     width: 60px;
     height: 60px;
-    background: var(--gradient-light);
+    background: var(--secondary-color);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -347,7 +343,7 @@ section {
 .info-icon {
     width: 60px;
     height: 60px;
-    background: var(--gradient-light);
+    background: var(--secondary-color);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -415,7 +411,7 @@ section {
 }
 
 .submit-button {
-    background: var(--gradient-primary);
+    background: var(--primary-color);
     color: var(--white);
     padding: 1.2rem 3rem;
     border: none;
@@ -429,13 +425,14 @@ section {
 }
 
 .submit-button:hover {
+    background: var(--secondary-color);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(26, 95, 122, 0.4);
 }
 
 /* Footer */
 footer {
-    background: var(--gradient-primary);
+    background: var(--primary-color);
     color: var(--white);
     padding: 4rem 2rem 1.5rem;
     margin-top: 4rem;
@@ -490,13 +487,28 @@ footer {
 .feature-image {
     width: 100%;
     height: 400px;
-    background: linear-gradient(135deg, rgba(26, 95, 122, 0.1) 0%, rgba(21, 152, 149, 0.1) 100%);
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
+    overflow: hidden;
     box-shadow: var(--shadow);
+}
+
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.feature-image:hover img {
+    transform: scale(1.05);
+}
+
+.feature-image-section.reverse {
+    direction: rtl;
+}
+
+.feature-image-section.reverse > * {
+    direction: ltr;
 }
 
 .feature-content h2 {
@@ -514,7 +526,7 @@ footer {
 
 /* Stats Section */
 .stats-section {
-    background: var(--gradient-primary);
+    background: var(--secondary-color);
     color: var(--white);
     padding: 4rem 2rem;
 }
