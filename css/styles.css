@@ -7,21 +7,25 @@
    CSS CUSTOM PROPERTIES (Design Tokens)
    ============================================ */
 :root {
-  /* Primary Palette - Healthcare Blues */
-  --color-primary-900: #0c4a6e;
-  --color-primary-800: #075985;
-  --color-primary-700: #0369a1;
-  --color-primary-600: #0284c7;
-  --color-primary-500: #0ea5e9;
-  --color-primary-400: #38bdf8;
-  --color-primary-100: #e0f2fe;
-  --color-primary-50: #f0f9ff;
+  /* Primary Palette - Rich Blue (brighter, matching logo) */
+  --color-primary-900: #1a2d4a;
+  --color-primary-800: #2b3e5c;
+  --color-primary-700: #1e4a7a;
+  --color-primary-600: #2563a8;
+  --color-primary-500: #3b7dc3;
+  --color-primary-400: #5d96d4;
+  --color-primary-300: #7faae0;
+  --color-primary-200: #a8caeb;
+  --color-primary-100: #d4e5f7;
+  --color-primary-50: #f0f6fc;
 
-  /* Accent - Teal for trust/health */
-  --color-accent-700: #0f766e;
-  --color-accent-600: #0d9488;
-  --color-accent-500: #14b8a6;
-  --color-accent-100: #ccfbf1;
+  /* Accent - Vibrant Professional Blue */
+  --color-accent-700: #0066cc;
+  --color-accent-600: #1a7de8;
+  --color-accent-500: #3b94ff;
+  --color-accent-400: #6baeff;
+  --color-accent-200: #b3d9ff;
+  --color-accent-100: #e6f3ff;
 
   /* Neutrals */
   --color-gray-900: #111827;
@@ -444,18 +448,18 @@ button {
 .btn--primary {
   background-color: var(--color-primary-600);
   color: var(--color-white);
-  box-shadow: 0 4px 14px 0 rgba(2, 132, 199, 0.4);
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 168, 0.4);
 }
 
 .btn--primary:hover {
   background-color: var(--color-primary-700);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px 0 rgba(2, 132, 199, 0.5);
+  box-shadow: 0 6px 20px 0 rgba(37, 99, 168, 0.5);
 }
 
 .btn--primary:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px 0 rgba(2, 132, 199, 0.4);
+  box-shadow: 0 2px 8px 0 rgba(37, 99, 168, 0.4);
 }
 
 .btn--secondary {
@@ -492,7 +496,7 @@ button {
 .hero {
   position: relative;
   padding: var(--space-16) 0 var(--space-20);
-  background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-white) 50%, var(--color-accent-100) 100%);
+  background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-white) 40%, var(--color-accent-100) 100%);
   overflow: hidden;
 }
 
@@ -1221,8 +1225,8 @@ button {
    FOOTER
    ============================================ */
 .site-footer {
-  background-color: var(--color-gray-900);
-  color: var(--color-gray-300);
+  background-color: var(--color-primary-800);
+  color: var(--color-gray-200);
   padding: var(--space-16) 0 var(--space-8);
 }
 
