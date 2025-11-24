@@ -55,4 +55,4 @@ This is a demonstration website created for internship purposes and is not inten
 
 ---
 
-*Demo website - Not for production use*
+
