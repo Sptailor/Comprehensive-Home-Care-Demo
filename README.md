@@ -37,11 +37,6 @@ CHC/
 - Vanilla JavaScript
 - No external dependencies or frameworks
 
-## Setup
-
-1. Clone this repository
-2. Open `index.html` in a web browser
-3. No build process or server required - static HTML site
 
 ## Demo Purpose
 
