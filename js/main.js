@@ -3,41 +3,18 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // ============================================
-    // NAVBAR SCROLL EFFECT WITH FLOATING BUTTON
+    // NAVBAR COLLAPSE BUTTON
     // ============================================
     const header = document.querySelector('.site-header');
-    let lastScroll = 0;
+    const collapseBtn = document.querySelector('.nav-collapse-btn');
 
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 100) {
-            header.classList.add('scrolled');
-            header.classList.remove('nav-open');
-        } else {
-            header.classList.remove('scrolled');
-            header.classList.remove('nav-open');
-        }
-
-        lastScroll = currentScroll;
-    });
-
-    // ============================================
-    // FLOATING NAV TRIGGER
-    // ============================================
-    const floatingTrigger = document.querySelector('.floating-nav-trigger');
-    const navClose = document.querySelector('.nav-close');
-
-    if (floatingTrigger) {
-        floatingTrigger.addEventListener('click', () => {
-            header.classList.toggle('nav-open');
+    if (collapseBtn && header) {
+        collapseBtn.addEventListener('click', function() {
+            header.classList.toggle('hidden');
+            console.log('Navbar toggled, hidden:', header.classList.contains('hidden'));
         });
-    }
-
-    if (navClose) {
-        navClose.addEventListener('click', () => {
-            header.classList.remove('nav-open');
-        });
+    } else {
+        console.error('Collapse button or header not found');
     }
 
     // ============================================
