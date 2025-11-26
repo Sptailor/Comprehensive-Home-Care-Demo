@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // ============================================
-    // NAVBAR SCROLL EFFECT
+    // NAVBAR SCROLL EFFECT WITH FLOATING BUTTON
     // ============================================
     const header = document.querySelector('.site-header');
     let lastScroll = 0;
@@ -11,14 +11,74 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
 
-        if (currentScroll > 50) {
+        if (currentScroll > 100) {
             header.classList.add('scrolled');
+            header.classList.remove('nav-open');
         } else {
             header.classList.remove('scrolled');
+            header.classList.remove('nav-open');
         }
 
         lastScroll = currentScroll;
     });
+
+    // ============================================
+    // FLOATING NAV TRIGGER
+    // ============================================
+    const floatingTrigger = document.querySelector('.floating-nav-trigger');
+    const navClose = document.querySelector('.nav-close');
+
+    if (floatingTrigger) {
+        floatingTrigger.addEventListener('click', () => {
+            header.classList.toggle('nav-open');
+        });
+    }
+
+    if (navClose) {
+        navClose.addEventListener('click', () => {
+            header.classList.remove('nav-open');
+        });
+    }
+
+    // ============================================
+    // MOBILE MENU TOGGLE
+    // ============================================
+    const mobileToggle = document.querySelector('.nav__mobile-toggle');
+    const navRight = document.querySelector('.nav__right');
+    const body = document.body;
+
+    // Create overlay element
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    body.appendChild(overlay);
+
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navRight.classList.toggle('active');
+            overlay.classList.toggle('active');
+            body.style.overflow = navRight.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking overlay
+        overlay.addEventListener('click', () => {
+            mobileToggle.classList.remove('active');
+            navRight.classList.remove('active');
+            overlay.classList.remove('active');
+            body.style.overflow = '';
+        });
+
+        // Close menu when clicking a nav link
+        const navLinks = document.querySelectorAll('.nav__link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navRight.classList.remove('active');
+                overlay.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+    }
 
     // ============================================
     // SCROLL ANIMATIONS (Intersection Observer)
