@@ -3,6 +3,24 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // ============================================
+    // NAVBAR SCROLL EFFECT
+    // ============================================
+    const header = document.querySelector('.site-header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        lastScroll = currentScroll;
+    });
+
+    // ============================================
     // SCROLL ANIMATIONS (Intersection Observer)
     // ============================================
     const observerOptions = {
