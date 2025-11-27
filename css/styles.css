@@ -377,26 +377,26 @@ button {
 }
 
 .icon-hamburger {
-  opacity: 0;
-  transform: scale(0.8) rotate(-90deg);
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
 }
 
 .icon-close {
-  opacity: 1;
-  transform: scale(1) rotate(0deg);
+  opacity: 0;
+  transform: scale(0.8) rotate(90deg);
   font-size: 36px;
   font-weight: 200;
 }
 
-/* When navbar is HIDDEN - show hamburger, hide X */
+/* When navbar is OPEN - show X, hide hamburger */
 .nav-collapse-btn.active .icon-hamburger {
-  opacity: 1;
-  transform: scale(1) rotate(0deg);
+  opacity: 0;
+  transform: scale(0.8) rotate(-90deg);
 }
 
 .nav-collapse-btn.active .icon-close {
-  opacity: 0;
-  transform: scale(0.8) rotate(90deg);
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
 }
 
 .nav {
@@ -417,6 +417,20 @@ button {
 }
 
 @media (max-width: 767px) {
+  .site-header {
+    position: fixed;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .nav__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .nav__right {
     position: fixed;
     top: 60px;
@@ -437,6 +451,7 @@ button {
   .nav__right.active {
     max-height: 400px;
     padding: var(--space-6) var(--space-4);
+    overflow-y: auto;
   }
 }
 
