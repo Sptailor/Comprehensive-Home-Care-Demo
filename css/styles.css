@@ -340,8 +340,8 @@ button {
   position: fixed;
   right: var(--space-6);
   top: 20px;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   background-color: var(--color-primary-600);
   border: none;
   border-radius: var(--radius-md);
@@ -352,6 +352,8 @@ button {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
   transition: all 0.2s ease;
   z-index: 101;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-collapse-btn:hover {
@@ -494,6 +496,10 @@ button {
   padding: var(--space-2) var(--space-4);
   position: relative;
   display: block;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  touch-action: manipulation;
 }
 
 .nav__link::after {
@@ -632,6 +638,9 @@ button {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  min-height: 44px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn::after {
@@ -1040,6 +1049,7 @@ button {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .service-card::after {
@@ -1912,6 +1922,173 @@ button {
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
+
+/* Mobile First Improvements */
+@media (max-width: 767px) {
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  .nav-collapse-btn {
+    right: var(--space-4);
+    top: 16px;
+  }
+
+  .site-header {
+    padding: var(--space-3) 0;
+  }
+
+  .page-header {
+    padding-top: var(--space-16) !important;
+    padding-bottom: var(--space-8) !important;
+  }
+
+  .page-header__title {
+    font-size: var(--text-3xl) !important;
+  }
+
+  .page-header__description {
+    font-size: var(--text-base) !important;
+  }
+
+  .hero {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-12);
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: var(--text-4xl);
+  }
+
+  .hero__description {
+    font-size: var(--text-base);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-3);
+  }
+
+  .section {
+    padding: var(--space-12) 0;
+  }
+
+  .section__header {
+    margin-bottom: var(--space-8);
+  }
+
+  .section__title {
+    font-size: var(--text-3xl);
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: var(--space-6);
+  }
+
+  .service-card__icon {
+    width: 56px;
+    height: 56px;
+    font-size: var(--text-3xl);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    padding: var(--space-4) var(--space-6);
+  }
+
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer__section--brand {
+    text-align: center;
+  }
+
+  .footer__logo-img {
+    margin: 0 auto var(--space-4);
+  }
+
+  .nav__logo-img {
+    max-width: 140px;
+  }
+
+  .cta {
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .cta__title {
+    font-size: var(--text-3xl);
+  }
+
+  .cta__description {
+    font-size: var(--text-base);
+  }
+
+  .cta__actions {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-overview {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .services-overview__item {
+    padding: var(--space-4);
+  }
+
+  .image-banner img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .feature {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .feature__image {
+    order: -1;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .hero__image {
+    display: none;
+  }
+}
 
 /* Tablet */
 @media (min-width: 768px) {
