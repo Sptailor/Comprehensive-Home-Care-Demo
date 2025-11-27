@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Read(//Users/suhailtailor/Desktop/CHC Inc./CHC /**)"
+      "Read(//Users/suhailtailor/Desktop/CHC Inc./CHC /**)",
+      "Bash(open index.html)"
     ],
     "deny": [],
     "ask": []

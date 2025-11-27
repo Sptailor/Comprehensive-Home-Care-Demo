@@ -41,22 +41,21 @@
   </header>
 
   <!-- Navbar collapse button -->
-  <button class="nav-collapse-btn" aria-label="Toggle navigation" onclick="document.querySelector('.site-header').classList.toggle('hidden')">
-    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
-    </svg>
+  <button class="nav-collapse-btn" aria-label="Toggle navigation" onclick="document.querySelector('.site-header').classList.toggle('hidden'); this.classList.toggle('active');">
+    <span class="icon-hamburger">☰</span>
+    <span class="icon-close">×</span>
   </button>
 
   <main>
     <!-- Page Header -->
-    <section class="page-header" style="padding-top: var(--space-10);">
+    <section class="page-header" style="padding-top: var(--space-20); padding-bottom: var(--space-12);">
       <div class="container">
         <h1 class="page-header__title">Comprehensive Care Solutions</h1>
-        <p class="page-header__description" style="margin-bottom: var(--space-10);">
+        <p class="page-header__description" style="margin-bottom: var(--space-8);">
           Personalized care services coordinated with your physician to help you achieve optimal daily functioning.
         </p>
 
-        <div class="services-overview">
+        <div class="services-overview" style="margin-bottom: var(--space-6);">
           <article class="services-overview__item">
             <div class="services-overview__icon">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
