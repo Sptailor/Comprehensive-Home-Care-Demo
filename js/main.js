@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const collapseBtn = document.querySelector('.nav-collapse-btn');
 
     if (collapseBtn && header) {
+        // Initialize button state on desktop
+        if (window.innerWidth >= 768) {
+            collapseBtn.classList.add('active');
+        }
+
         collapseBtn.addEventListener('click', function(e) {
             e.preventDefault();
 
