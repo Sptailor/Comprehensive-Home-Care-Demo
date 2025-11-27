@@ -106,16 +106,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // NAVBAR SCROLL EFFECT
     // ============================================
-    const header = document.querySelector('.site-header');
     let lastScroll = 0;
 
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
 
         // Add shadow on scroll
-        if (currentScroll > 10) {
+        if (currentScroll > 10 && header) {
             header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-        } else {
+        } else if (header) {
             header.style.boxShadow = 'none';
         }
 
@@ -169,19 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.5 });
 
     counters.forEach(counter => counterObserver.observe(counter));
-
-    // ============================================
-    // MOBILE MENU TOGGLE
-    // ============================================
-    const mobileToggle = document.querySelector('.nav__mobile-toggle');
-    const navLinks = document.querySelector('.nav__links');
-
-    if (mobileToggle && navLinks) {
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('nav__links--open');
-            mobileToggle.classList.toggle('nav__mobile-toggle--active');
-        });
-    }
 
     // ============================================
     // CONTACT FORM HANDLING
