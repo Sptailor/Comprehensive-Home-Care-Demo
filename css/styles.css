@@ -373,6 +373,7 @@ button {
   align-items: center;
   justify-content: center;
   padding: 0;
+  pointer-events: none;
 }
 
 .icon-hamburger {
@@ -418,21 +419,24 @@ button {
 @media (max-width: 767px) {
   .nav__right {
     position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 280px;
+    top: 60px;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
     background-color: var(--color-white);
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 0;
-    padding: var(--space-16) var(--space-6);
-    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease;
+    padding: 0 var(--space-4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    z-index: 99;
   }
 
   .nav__right.active {
-    right: 0;
+    max-height: 400px;
+    padding: var(--space-6) var(--space-4);
   }
 }
 
@@ -484,8 +488,18 @@ button {
   .nav__links {
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
+    gap: var(--space-1);
     width: 100%;
+    text-align: center;
+  }
+
+  .nav__link {
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--color-gray-100);
+  }
+
+  .nav__link:last-child {
+    border-bottom: none;
   }
 }
 
@@ -565,7 +579,7 @@ button {
 }
 
 .nav__mobile-toggle {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 6px;
   background: none;
@@ -610,10 +624,11 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 98;
   opacity: 0;
   transition: opacity 0.3s ease;
+  backdrop-filter: blur(2px);
 }
 
 .nav-overlay.active {
@@ -1934,11 +1949,28 @@ button {
 
   .nav-collapse-btn {
     right: var(--space-4);
-    top: 16px;
+    top: 12px;
+    width: 36px;
+    height: 36px;
+    z-index: 102;
+  }
+
+  .nav-collapse-btn span {
+    font-size: 24px;
+  }
+
+  .icon-close {
+    font-size: 30px;
   }
 
   .site-header {
     padding: var(--space-3) 0;
+  }
+
+  .nav__cta {
+    margin-top: var(--space-4);
+    width: 100%;
+    text-align: center;
   }
 
   .page-header {
@@ -1955,7 +1987,7 @@ button {
   }
 
   .hero {
-    padding-top: var(--space-16);
+    padding-top: calc(var(--space-16) + 60px);
     padding-bottom: var(--space-12);
     text-align: center;
   }

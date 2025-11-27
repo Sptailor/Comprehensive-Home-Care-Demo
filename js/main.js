@@ -9,18 +9,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const collapseBtn = document.querySelector('.nav-collapse-btn');
 
     if (collapseBtn && header) {
-        collapseBtn.addEventListener('click', function() {
-            header.classList.toggle('hidden');
-            console.log('Navbar toggled, hidden:', header.classList.contains('hidden'));
+        collapseBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Check if we're on mobile (screen width < 768px)
+            if (window.innerWidth < 768) {
+                // On mobile, toggle the mobile menu
+                const navRight = document.querySelector('.nav__right');
+                const overlay = document.querySelector('.nav-overlay');
+                if (navRight) {
+                    navRight.classList.toggle('active');
+                    collapseBtn.classList.toggle('active');
+                    if (overlay) {
+                        overlay.classList.toggle('active');
+                    }
+                    document.body.style.overflow = navRight.classList.contains('active') ? 'hidden' : '';
+                }
+            } else {
+                // On desktop, hide/show the entire navbar
+                header.classList.toggle('hidden');
+                collapseBtn.classList.toggle('active');
+            }
+
+            console.log('Navbar toggled');
         });
     } else {
         console.error('Collapse button or header not found');
     }
 
     // ============================================
-    // MOBILE MENU TOGGLE
+    // MOBILE MENU TOGGLE & OVERLAY
     // ============================================
-    const mobileToggle = document.querySelector('.nav__mobile-toggle');
     const navRight = document.querySelector('.nav__right');
     const body = document.body;
 
@@ -29,33 +48,32 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.className = 'nav-overlay';
     body.appendChild(overlay);
 
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
-            mobileToggle.classList.toggle('active');
-            navRight.classList.toggle('active');
-            overlay.classList.toggle('active');
-            body.style.overflow = navRight.classList.contains('active') ? 'hidden' : '';
-        });
-
-        // Close menu when clicking overlay
-        overlay.addEventListener('click', () => {
-            mobileToggle.classList.remove('active');
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', () => {
+        if (collapseBtn) {
+            collapseBtn.classList.remove('active');
+        }
+        if (navRight) {
             navRight.classList.remove('active');
+        }
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+    });
+
+    // Close menu when clicking a nav link
+    const navLinks = document.querySelectorAll('.nav__link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (collapseBtn) {
+                collapseBtn.classList.remove('active');
+            }
+            if (navRight) {
+                navRight.classList.remove('active');
+            }
             overlay.classList.remove('active');
             body.style.overflow = '';
         });
-
-        // Close menu when clicking a nav link
-        const navLinks = document.querySelectorAll('.nav__link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileToggle.classList.remove('active');
-                navRight.classList.remove('active');
-                overlay.classList.remove('active');
-                body.style.overflow = '';
-            });
-        });
-    }
+    });
 
     // ============================================
     // SCROLL ANIMATIONS (Intersection Observer)
