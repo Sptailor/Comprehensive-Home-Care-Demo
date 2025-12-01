@@ -336,6 +336,14 @@ button {
   transform: translateY(-100%);
 }
 
+.site-header.hidden ~ main .page-header {
+  padding-top: var(--space-12) !important;
+}
+
+.site-header.hidden ~ main .hero {
+  padding-top: var(--space-16) !important;
+}
+
 .nav-collapse-btn {
   position: fixed;
   right: var(--space-6);
