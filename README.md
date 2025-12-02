@@ -8,7 +8,8 @@ A modern, responsive website for Comprehensive Home Care, a home health care ser
 CHC/
 ├── index.html          # Homepage with hero section and service overview
 ├── services.html       # Detailed services page
-├── contact.html        # Contact page with form
+├── contact.html        # Contact page with form and Google Maps
+├── favicon.svg         # Custom SVG favicon with brand colors
 ├── css/
 │   └── styles.css      # Main stylesheet with design system
 ├── js/
@@ -37,10 +38,17 @@ CHC/
 - **Accessibility**: High contrast, readable fonts, semantic HTML
 
 ### Interactive Features
-- **Collapsible Navbar**: Toggle button with hamburger/X icon animation
+
+- **Collapsible Navbar**:
+  - Toggle button with smooth hamburger ↔ X icon transitions
+  - Desktop: Hides/shows entire navbar
+  - Mobile: Slide-down menu with centered logo
+  - Adaptive icon states based on screen size
 - **Contact Form**: Client-side validation with animated submit states
 - **Service Cards**: Interactive hover effects with 3D tilt on desktop
 - **Mobile Menu Overlay**: Backdrop blur effect with smooth slide-in animation
+- **Google Maps Integration**: Interactive embedded map with location cards
+- **Custom Favicon**: SVG favicon with medical cross symbol in brand colors
 
 ### Performance
 - **No External Dependencies**: Pure HTML, CSS, and vanilla JavaScript
@@ -67,6 +75,8 @@ CHC/
    - Business information and hours
    - Service selection dropdown
    - Animated submit feedback
+   - Google Maps embed showing office location
+   - Location info cards (address and parking information)
 
 ## Technologies Used
 
@@ -80,7 +90,8 @@ CHC/
   - Intersection Observer API for scroll animations
   - Dynamic counter animations
   - Form handling and validation
-  - Responsive navbar toggling
+  - Responsive navbar toggling with adaptive icon states
+  - Google Maps API integration
 - **No Frameworks**: Zero external dependencies for optimal performance
 
 ## Browser Compatibility
@@ -110,8 +121,9 @@ CHC/
 ### JavaScript Features
 - Modular event handling
 - Scroll-based animations
-- Dynamic state management
+- Dynamic state management with adaptive navbar behavior
 - Performance-optimized observers
+- Context-aware UI states (mobile vs desktop navigation)
 
 ## Deployment
 
@@ -119,9 +131,28 @@ This website is deployed on:
 - **Vercel**: [Production URL]
 - **GitHub Pages**: [Production URL]
 
+## Key Features Summary
+
+- **Fully Responsive**: 5 breakpoints covering mobile to large desktop
+- **Accessibility-First**: ARIA attributes, semantic HTML, 44px touch targets
+- **Performance Optimized**: Zero dependencies, lazy loading, hardware-accelerated animations
+- **Modern Interactions**: Scroll animations, animated counters, adaptive navigation
+- **Professional Design**: Custom design system, gradient effects, polished UI
+- **Location Integration**: Google Maps embed with interactive location cards
+- **Custom Branding**: SVG favicon with medical cross in brand colors
+
+## Recent Updates
+
+- Added custom SVG favicon with CHC branding
+- Integrated Google Maps on contact page with location cards
+- Implemented adaptive navbar with context-aware icon states
+- Enhanced mobile responsiveness with progressive spacing adjustments
+- Fixed duplicate JavaScript event handlers for improved reliability
+- Added dynamic padding adjustments when navbar is collapsed
+
 ## Demo Purpose
 
-This website was created as a professional demonstration project and showcases modern web development best practices.
+This website was created as a professional demonstration project and showcases modern web development best practices including responsive design, accessibility, performance optimization, and clean code architecture.
 
 ## Contact Information
 
