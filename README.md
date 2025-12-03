@@ -128,8 +128,8 @@ CHC/
 ## Deployment
 
 This website is deployed on:
-- **Vercel**: [Production URL]
-- **GitHub Pages**: [Production URL]
+
+- **Vercel**: [https://comprehensive-home-care-demo.vercel.app/](https://comprehensive-home-care-demo.vercel.app/)
 
 ## Key Features Summary
 
