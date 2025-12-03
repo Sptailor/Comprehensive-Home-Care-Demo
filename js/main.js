@@ -3,10 +3,11 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // ============================================
-    // NAVBAR COLLAPSE BUTTON
+    // UNIFIED NAVBAR TOGGLE SYSTEM
     // ============================================
     const header = document.querySelector('.site-header');
     const collapseBtn = document.querySelector('.nav-collapse-btn');
+    const navRight = document.querySelector('.nav__right');
 
     if (collapseBtn && header) {
         // Initialize button state on desktop
@@ -20,32 +21,60 @@ document.addEventListener('DOMContentLoaded', function() {
             // Check if we're on mobile (screen width < 768px)
             if (window.innerWidth < 768) {
                 // On mobile, toggle the mobile menu
-                const navRight = document.querySelector('.nav__right');
                 const overlay = document.querySelector('.nav-overlay');
-                if (navRight) {
-                    navRight.classList.toggle('active');
-                    collapseBtn.classList.toggle('active');
-                    if (overlay) {
-                        overlay.classList.toggle('active');
-                    }
-                    document.body.style.overflow = navRight.classList.contains('active') ? 'hidden' : '';
+                const isOpen = navRight.classList.contains('active');
+
+                navRight.classList.toggle('active');
+                collapseBtn.classList.toggle('active');
+
+                // Update aria-expanded for accessibility
+                collapseBtn.setAttribute('aria-expanded', !isOpen);
+
+                if (overlay) {
+                    overlay.classList.toggle('active');
                 }
+                document.body.style.overflow = !isOpen ? 'hidden' : '';
             } else {
                 // On desktop, hide/show the entire navbar
+                const isHidden = header.classList.contains('hidden');
                 header.classList.toggle('hidden');
                 collapseBtn.classList.toggle('active');
-            }
 
-            console.log('Navbar toggled');
+                // Update aria-expanded for accessibility
+                collapseBtn.setAttribute('aria-expanded', isHidden);
+            }
         });
-    } else {
-        console.error('Collapse button or header not found');
+
+        // Handle window resize - reset states
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                const width = window.innerWidth;
+
+                // Reset mobile menu when switching to desktop
+                if (width >= 768) {
+                    navRight.classList.remove('active');
+                    document.body.style.overflow = '';
+                    const overlay = document.querySelector('.nav-overlay');
+                    if (overlay) {
+                        overlay.classList.remove('active');
+                    }
+                    // Show navbar on desktop
+                    header.classList.remove('hidden');
+                    collapseBtn.classList.add('active');
+                } else {
+                    // Reset desktop collapse state on mobile
+                    header.classList.remove('hidden');
+                    collapseBtn.classList.remove('active');
+                }
+            }, 250);
+        });
     }
 
     // ============================================
-    // MOBILE MENU TOGGLE & OVERLAY
+    // MOBILE MENU OVERLAY & CLOSE HANDLERS
     // ============================================
-    const navRight = document.querySelector('.nav__right');
     const body = document.body;
 
     // Create overlay element
@@ -57,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.addEventListener('click', () => {
         if (collapseBtn) {
             collapseBtn.classList.remove('active');
+            collapseBtn.setAttribute('aria-expanded', 'false');
         }
         if (navRight) {
             navRight.classList.remove('active');
@@ -71,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', () => {
             if (collapseBtn) {
                 collapseBtn.classList.remove('active');
+                collapseBtn.setAttribute('aria-expanded', 'false');
             }
             if (navRight) {
                 navRight.classList.remove('active');
@@ -339,30 +370,6 @@ const style = document.createElement('style');
 style.textContent = `
     @keyframes spin {
         to { transform: rotate(360deg); }
-    }
-
-    .nav__links--open {
-        display: flex !important;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: white;
-        padding: 1rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav__mobile-toggle--active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .nav__mobile-toggle--active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav__mobile-toggle--active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
     }
 
     .form-group--focused .form-label {

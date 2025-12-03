@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Read(//Users/suhailtailor/Desktop/CHC Inc./CHC /**)",
-      "Bash(open index.html)"
+      "Bash(open index.html)",
+      "Read(//Users/suhailtailor/Desktop/CHC Inc./CHC /css/**)",
+      "Read(//Users/suhailtailor/Desktop/CHC Inc./CHC /js/**)",
+      "Bash(open:*)"
     ],
     "deny": [],
     "ask": []
