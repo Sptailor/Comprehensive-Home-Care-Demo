@@ -154,12 +154,4 @@ This website is deployed on:
 
 This website was created as a professional demonstration project and showcases modern web development best practices including responsive design, accessibility, performance optimization, and clean code architecture.
 
-## Contact Information
-
-**Comprehensive Home Care**
-- Address: 6321 N Avondale Ave Suite 106, Chicago, IL 60631
-- Hours: Monday - Friday, 9:00 AM - 5:00 PM
-
 ---
-
-
