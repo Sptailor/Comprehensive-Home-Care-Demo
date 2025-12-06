@@ -680,6 +680,16 @@ button {
   box-shadow: 0 2px 8px 0 rgba(37, 99, 168, 0.4);
 }
 
+.btn--gradient {
+  background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%);
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 168, 0.5);
+}
+
+.btn--gradient:hover {
+  background: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-accent-700) 100%);
+  box-shadow: 0 6px 20px 0 rgba(37, 99, 168, 0.6);
+}
+
 .btn--secondary {
   background-color: var(--color-white);
   color: var(--color-primary-600);
@@ -1480,6 +1490,37 @@ button {
 }
 
 /* ============================================
+   WAVE DIVIDER
+   ============================================ */
+.wave-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  margin-bottom: -1px;
+}
+
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
+
+.wave-divider--flip {
+  transform: rotate(0deg);
+  margin-top: -1px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .wave-divider svg {
+    height: 50px;
+  }
+}
+
+/* ============================================
    CONTACT FORM
    ============================================ */
 .contact-grid {
@@ -1571,20 +1612,22 @@ button {
 }
 
 .contact-card__icon {
-  width: 44px;
-  height: 44px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-md);
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .contact-card__icon svg {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   color: var(--color-white);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .contact-card__title {
@@ -1648,14 +1691,14 @@ button {
   padding: var(--space-6);
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   text-align: left;
   transition: all 0.3s ease;
 }
 
 .map-info-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 .map-info-card__icon {
@@ -1738,7 +1781,7 @@ button {
   background-color: var(--color-white);
   border-radius: var(--radius-xl);
   padding: var(--space-8);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-xl);
   border: 1px solid var(--color-gray-100);
 }
 
