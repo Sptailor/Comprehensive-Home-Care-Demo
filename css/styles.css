@@ -2234,30 +2234,27 @@ button {
     line-height: 1.6;
   }
 
-  /* Create a 2-column layout for Services and Quick Links */
-  .footer__section:nth-child(2),
-  .footer__section:nth-child(3) {
-    display: inline-block;
-    width: calc(50% - var(--space-3));
-    vertical-align: top;
-    text-align: left;
-    padding: var(--space-6) var(--space-2) 0;
-    border-bottom: none;
-  }
-
+  /* Hide Services section on mobile */
   .footer__section:nth-child(2) {
-    padding-right: var(--space-3);
+    display: none;
   }
 
+  /* Quick Links section - full width, centered */
   .footer__section:nth-child(3) {
-    padding-left: var(--space-3);
+    text-align: center;
+    padding: var(--space-6) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer__section:nth-child(3) .footer__links {
+    align-items: center;
   }
 
   /* Contact Info section - full width */
   .footer__section:nth-child(4) {
     text-align: center;
     padding: var(--space-6) 0 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: none;
     grid-column: 1 / -1;
   }
