@@ -2205,8 +2205,9 @@ button {
   }
 
   .footer-grid {
+    display: grid;
     grid-template-columns: 1fr;
-    gap: var(--space-8);
+    gap: var(--space-6);
     margin-bottom: var(--space-8);
   }
 
@@ -2215,6 +2216,7 @@ button {
     max-width: 100%;
     padding-bottom: var(--space-6);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    grid-column: 1 / -1;
   }
 
   .footer__logo {
@@ -2232,31 +2234,50 @@ button {
     line-height: 1.6;
   }
 
-  .footer__section {
-    text-align: center;
-    padding: var(--space-6) 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* Create a 2-column layout for Services and Quick Links */
+  .footer__section:nth-child(2),
+  .footer__section:nth-child(3) {
+    display: inline-block;
+    width: calc(50% - var(--space-3));
+    vertical-align: top;
+    text-align: left;
+    padding: var(--space-6) var(--space-2) 0;
+    border-bottom: none;
   }
 
-  .footer__section:last-of-type {
+  .footer__section:nth-child(2) {
+    padding-right: var(--space-3);
+  }
+
+  .footer__section:nth-child(3) {
+    padding-left: var(--space-3);
+  }
+
+  /* Contact Info section - full width */
+  .footer__section:nth-child(4) {
+    text-align: center;
+    padding: var(--space-6) 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: none;
-    padding-bottom: 0;
+    grid-column: 1 / -1;
   }
 
   .footer__section-title {
-    font-size: var(--text-base);
-    margin-bottom: var(--space-5);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-4);
     color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   .footer__links {
-    align-items: center;
-    gap: var(--space-4);
+    align-items: flex-start;
+    gap: var(--space-3);
   }
 
   .footer__link {
-    font-size: var(--text-base);
-    padding: var(--space-2) 0;
+    font-size: var(--text-sm);
+    padding: var(--space-1) 0;
     display: block;
     color: rgba(255, 255, 255, 0.85);
   }
@@ -2264,14 +2285,14 @@ button {
   .footer__contact-item {
     justify-content: center;
     margin-bottom: var(--space-4);
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
   }
 
   .footer__contact-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     margin-top: 3px;
   }
 
