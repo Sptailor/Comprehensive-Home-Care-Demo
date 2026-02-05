@@ -274,7 +274,7 @@ body {
   font-family: var(--font-family-primary);
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
-  color: var(--color-gray-700);
+  color: var(--color-gray-800);
   background-color: var(--color-white);
 }
 
@@ -869,7 +869,7 @@ button {
 
 .hero__description {
   font-size: var(--text-lg);
-  color: var(--color-gray-600);
+  color: var(--color-gray-700);
   line-height: var(--leading-relaxed);
   margin-bottom: var(--space-8);
 }
@@ -894,7 +894,7 @@ button {
   align-items: center;
   gap: var(--space-2);
   font-size: var(--text-sm);
-  color: var(--color-gray-600);
+  color: var(--color-gray-700);
 }
 
 .hero__trust-icon {
@@ -1031,7 +1031,7 @@ button {
 
 .section__description {
   font-size: var(--text-lg);
-  color: var(--color-gray-600);
+  color: var(--color-gray-700);
   line-height: var(--leading-relaxed);
 }
 
@@ -1124,7 +1124,7 @@ button {
 
 .service-card__description {
   font-size: var(--text-base);
-  color: var(--color-gray-600);
+  color: var(--color-gray-700);
   line-height: var(--leading-relaxed);
 }
 
@@ -1219,7 +1219,7 @@ button {
 
 .services-overview__description {
   font-size: var(--text-sm);
-  color: var(--color-gray-600);
+  color: var(--color-gray-700);
   line-height: var(--leading-normal);
 }
 
@@ -1294,7 +1294,7 @@ button {
 
 .feature__description {
   font-size: var(--text-base);
-  color: var(--color-gray-600);
+  color: var(--color-gray-700);
   line-height: var(--leading-relaxed);
   margin-bottom: var(--space-6);
 }
