@@ -1820,12 +1820,12 @@ button {
 .form-select,
 .form-textarea {
   width: 100%;
-  padding: var(--space-3) var(--space-4);
+  padding: var(--space-4) var(--space-4);
   font-size: var(--text-base);
   font-family: inherit;
   color: var(--color-gray-900);
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray-300);
+  border: 2px solid var(--color-gray-300);
   border-radius: var(--radius-lg);
   transition: all var(--transition-fast);
 }
@@ -1834,7 +1834,7 @@ button {
 .form-select:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-600);
   box-shadow: 0 0 0 3px var(--color-primary-100);
 }
 
