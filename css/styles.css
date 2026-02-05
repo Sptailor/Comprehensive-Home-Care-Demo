@@ -1097,8 +1097,6 @@ button {
 
 .service-card:hover .service-card__icon {
   background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%);
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(37, 99, 168, 0.25);
 }
 
 .service-card__icon svg {
@@ -1110,7 +1108,6 @@ button {
 
 .service-card:hover .service-card__icon svg {
   color: var(--color-white);
-  transform: scale(1.1);
 }
 
 .service-card__title {
@@ -1195,8 +1192,7 @@ button {
 }
 
 .services-overview__item:hover .services-overview__icon {
-  transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(37, 99, 168, 0.35);
+  box-shadow: 0 4px 12px rgba(37, 99, 168, 0.25);
 }
 
 .services-overview__icon svg {
@@ -1207,7 +1203,7 @@ button {
 }
 
 .services-overview__item:hover .services-overview__icon svg {
-  transform: scale(1.1);
+  /* no transform - stable icon */
 }
 
 .services-overview__content {
