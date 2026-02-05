@@ -373,10 +373,8 @@ button {
 .nav-collapse-btn span {
   position: absolute;
   color: var(--color-white);
-  font-size: 28px;
   line-height: 1;
-  transition: all 0.3s ease;
-  font-weight: 300;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -384,27 +382,26 @@ button {
   pointer-events: none;
 }
 
+.nav-collapse-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
 .icon-hamburger {
   opacity: 1;
-  transform: scale(1) rotate(0deg);
 }
 
 .icon-close {
   opacity: 0;
-  transform: scale(0.8) rotate(90deg);
-  font-size: 36px;
-  font-weight: 200;
 }
 
 /* When navbar is OPEN - show X, hide hamburger */
 .nav-collapse-btn.active .icon-hamburger {
   opacity: 0;
-  transform: scale(0.8) rotate(-90deg);
 }
 
 .nav-collapse-btn.active .icon-close {
   opacity: 1;
-  transform: scale(1) rotate(0deg);
 }
 
 .nav {

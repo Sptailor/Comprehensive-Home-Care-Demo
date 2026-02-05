@@ -5,7 +5,9 @@
       "Bash(open index.html)",
       "Read(//Users/suhailtailor/Desktop/CHC Inc./CHC /css/**)",
       "Read(//Users/suhailtailor/Desktop/CHC Inc./CHC /js/**)",
-      "Bash(open:*)"
+      "Bash(open:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
