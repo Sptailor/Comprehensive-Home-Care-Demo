@@ -671,12 +671,10 @@ button {
 
 .btn--primary:hover {
   background-color: var(--color-primary-700);
-  transform: translateY(-2px);
   box-shadow: 0 2px 6px 0 rgba(37, 99, 168, 0.3);
 }
 
 .btn--primary:active {
-  transform: translateY(0);
   box-shadow: 0 1px 2px 0 rgba(37, 99, 168, 0.2);
 }
 
@@ -699,12 +697,11 @@ button {
 .btn--secondary:hover {
   background-color: var(--color-gray-50);
   border-color: var(--color-primary-300);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn--secondary:active {
-  transform: translateY(0);
+  box-shadow: none;
 }
 
 .btn--lg {
