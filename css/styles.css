@@ -1361,15 +1361,15 @@ button {
   background-color: var(--color-white);
   border-radius: var(--radius-xl);
   padding: var(--space-8);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-gray-100);
+  box-shadow: var(--shadow-sm);
+  border: 2px solid var(--color-gray-200);
 }
 
 .testimonial-card__quote {
   font-size: var(--text-base);
-  color: var(--color-gray-700);
+  color: var(--color-gray-800);
   line-height: var(--leading-relaxed);
-  font-style: italic;
+  font-style: normal;
   margin-bottom: var(--space-6);
 }
 
