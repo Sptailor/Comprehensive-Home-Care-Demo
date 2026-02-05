@@ -1075,9 +1075,8 @@ button {
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(37, 99, 168, 0.15);
-  border-color: var(--color-accent-400);
+  box-shadow: 0 4px 12px rgba(37, 99, 168, 0.1);
+  border-color: var(--color-primary-300);
 }
 
 .service-card:hover::after {
@@ -1174,9 +1173,8 @@ button {
 }
 
 .services-overview__item:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: var(--shadow-xl);
-  border-color: var(--color-accent-400);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary-300);
 }
 
 .services-overview__item:hover::before {
@@ -1694,8 +1692,8 @@ button {
 }
 
 .map-info-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary-200);
 }
 
 .map-info-card__icon {
@@ -1943,7 +1941,6 @@ button {
 .footer__social-link:hover {
   background-color: var(--color-primary-600);
   color: var(--color-white);
-  transform: translateY(-2px);
 }
 
 .footer__social-link svg {
