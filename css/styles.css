@@ -1859,6 +1859,7 @@ button {
   padding: var(--space-16) 0 var(--space-8);
   position: relative;
   overflow: hidden;
+  max-width: 100vw;
 }
 
 .site-footer::before {
