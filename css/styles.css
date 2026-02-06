@@ -914,6 +914,7 @@ button {
 .section {
   padding: var(--space-16) 0;
   position: relative;
+  overflow: hidden;
 }
 
 .section--gray {
