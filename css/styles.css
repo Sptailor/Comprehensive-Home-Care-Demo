@@ -2129,7 +2129,7 @@ button {
   }
 
   main {
-    padding-top: 70px;
+    padding-top: 60px;
   }
 
   .hero {
@@ -2324,7 +2324,8 @@ button {
   }
 
   .nav__logo-img {
-    max-width: 140px;
+    max-width: 120px;
+    height: auto;
   }
 
   .cta {
