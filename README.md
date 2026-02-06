@@ -1,6 +1,15 @@
 # Comprehensive Home Care - Website
 
-A modern, responsive website for Comprehensive Home Care, a home health care service based in Chicago, IL.
+A modern, professional website for **Comprehensive Home Care, Inc.**, a trusted home health care provider serving Chicago, IL and surrounding areas.
+
+## About
+
+Comprehensive Home Care provides skilled nursing, rehabilitation therapy, and personalized home health services. This website is designed with elderly users in mind, featuring:
+
+- Clean, professional design with high readability
+- Large touch targets for easy navigation
+- High contrast text for accessibility
+- Simple, intuitive user experience
 
 ## Project Structure
 
