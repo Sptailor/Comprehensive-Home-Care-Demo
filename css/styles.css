@@ -2188,7 +2188,15 @@ button {
   .btn {
     width: 100%;
     justify-content: center;
-    padding: var(--space-4) var(--space-6);
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--text-sm);
+    min-height: 44px;
+  }
+
+  .btn--lg {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-base);
+    min-height: 46px;
   }
 
   .footer__content {
