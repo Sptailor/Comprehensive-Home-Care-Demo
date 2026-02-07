@@ -177,6 +177,30 @@ The website uses CSS custom properties for consistent styling:
 - Performance-optimized observers
 - Context-aware UI states (mobile vs desktop navigation)
 
+## Getting Started
+
+### Prerequisites
+
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- A local web server (optional, for development)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Sptailor/Comprehensive-Home-Care-Demo.git
+```
+
+2. Navigate to the project folder:
+```bash
+cd Comprehensive-Home-Care-Demo
+```
+
+3. Open `index.html` in your browser, or use a local server:
+```bash
+npx serve .
+```
+
 ## Deployment
 
 This website is deployed on:
