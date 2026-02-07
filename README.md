@@ -238,6 +238,14 @@ This website is deployed on:
 - Fixed duplicate JavaScript event handlers for improved reliability
 - Added dynamic padding adjustments when navbar is collapsed
 
+## Business Information
+
+**Comprehensive Home Care, Inc.**
+
+- **Address**: 6321 N Avondale Ave Suite 106, Chicago, IL 60631
+- **Hours**: Monday - Friday, 9:00 AM - 5:00 PM
+- **Email**: info@chcihomecare.com
+
 ## Demo Purpose
 
 This website was created as a professional demonstration project and showcases modern web development best practices including responsive design, accessibility, performance optimization, and clean code architecture.
