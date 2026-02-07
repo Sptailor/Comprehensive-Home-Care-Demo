@@ -145,7 +145,26 @@ This website is designed with accessibility as a priority:
 
 ## Development Notes
 
+### Design System
+
+The website uses CSS custom properties for consistent styling:
+
+```css
+/* Color Palette */
+--color-primary-600: #2563a8    /* Primary blue */
+--color-accent-600: #1a7de8     /* Accent blue */
+--color-gray-800: #1f2937       /* Text color */
+
+/* Typography */
+--font-family: 'Inter', sans-serif
+--text-base: 1rem (16px)
+
+/* Spacing Scale */
+--space-1 to --space-24 (0.25rem to 6rem)
+```
+
 ### CSS Architecture
+
 - Mobile-first responsive design
 - BEM-inspired naming conventions
 - Organized by component sections
