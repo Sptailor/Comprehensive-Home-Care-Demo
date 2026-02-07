@@ -219,6 +219,18 @@ This website is deployed on:
 
 ## Recent Updates
 
+### UI Improvements (Latest)
+
+- Simplified button design with flatter shadows
+- Removed hover animations for elderly-friendly experience
+- Improved text contrast throughout the site
+- Larger form inputs with thicker borders
+- Better hamburger menu icon (SVG)
+- Reduced animation durations for cleaner feel
+- Fixed mobile viewport zoom issues
+
+### Previous Updates
+
 - Added custom SVG favicon with CHC branding
 - Integrated Google Maps on contact page with location cards
 - Implemented adaptive navbar with context-aware icon states
