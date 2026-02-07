@@ -250,4 +250,16 @@ This website is deployed on:
 
 This website was created as a professional demonstration project and showcases modern web development best practices including responsive design, accessibility, performance optimization, and clean code architecture.
 
+## Credits
+
+- **Design & Development**: Professional web development demonstration
+- **Images**: Unsplash (free stock photos)
+- **Icons**: Heroicons (MIT License)
+- **Font**: Inter (Google Fonts, Open Font License)
+- **Maps**: Google Maps Embed API
+
+## License
+
+This project is for demonstration purposes. All rights reserved.
+
 ---
