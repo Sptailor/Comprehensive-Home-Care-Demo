@@ -11,6 +11,18 @@ Comprehensive Home Care provides skilled nursing, rehabilitation therapy, and pe
 - High contrast text for accessibility
 - Simple, intuitive user experience
 
+## Services Offered
+
+The website showcases the following home care services:
+
+| Service | Description |
+|---------|-------------|
+| **Skilled Nursing** | Professional nursing care in the comfort of home |
+| **Physical Therapy** | Rehabilitation to restore mobility and strength |
+| **Occupational Therapy** | Help with daily living activities |
+| **Speech Therapy** | Communication and swallowing therapy |
+| **Home Health Aid** | Personal care and assistance |
+
 ## Project Structure
 
 ```
