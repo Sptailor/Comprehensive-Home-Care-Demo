@@ -115,6 +115,18 @@ CHC/
   - Google Maps API integration
 - **No Frameworks**: Zero external dependencies for optimal performance
 
+## Accessibility Features
+
+This website is designed with accessibility as a priority:
+
+- **High Contrast**: Text meets WCAG AA contrast requirements
+- **Large Font Sizes**: Base 16px font with responsive scaling
+- **Touch Targets**: Minimum 44px touch targets for buttons and links
+- **Semantic HTML**: Proper heading hierarchy and ARIA labels
+- **Keyboard Navigation**: Full keyboard accessibility
+- **Screen Reader Support**: Descriptive alt text and ARIA attributes
+- **Reduced Motion**: Simplified animations for better usability
+
 ## Browser Compatibility
 
 - Chrome (latest)
